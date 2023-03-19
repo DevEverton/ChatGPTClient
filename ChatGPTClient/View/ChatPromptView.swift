@@ -15,18 +15,21 @@ struct ChatPromptView: View {
     var body: some View {
         HStack {
             TextField(placeholder, text: $text)
-                .padding(8)
+                .padding(12)
                 .font(.system(size: 16, weight: .light, design: .rounded))
+                .foregroundColor(Color.Prompt.text)
                 .background(.white)
-                .cornerRadius(24)
             
             Button(action: action) {
                 Image(systemName: "paperplane.fill")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color.Button.sendIcon)
             }
+            .padding(12)
         }
-        .padding()
-        .background(Color(.systemGray).opacity(0.2))
+        .background(.white)
+        .cornerRadius(8)
+        .frame(height: 30)
+        .padding([.bottom, .horizontal], 12)
     }
 }
 
@@ -36,5 +39,6 @@ struct ChatPromptView_Previews: PreviewProvider {
             Spacer()
             ChatPromptView(text: .constant("Testing"), placeholder: "How can I help?", action: {})
         }
+        .background(Color.MainChat.background)
     }
 }

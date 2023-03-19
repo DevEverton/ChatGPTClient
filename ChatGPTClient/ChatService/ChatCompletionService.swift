@@ -23,7 +23,6 @@ class ChatCompletionService: ChatCompletionServiceProtocol {
         let parameters: [String: Any] = [
             "model": "gpt-3.5-turbo",
             "messages": [["role": "user", "content": prompt]]
-            
         ]
         
         do {

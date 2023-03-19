@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct ChatPrompt {
+struct ChatPrompt: ChatMessageProtocol, Hashable {
+    var id: UUID
+    
     let text: String
     var suggestion: ChatPromptSuggestion
 }

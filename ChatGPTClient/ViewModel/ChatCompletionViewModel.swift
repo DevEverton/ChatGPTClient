@@ -5,10 +5,11 @@
 //  Created by Everton Carneiro on 16/03/23.
 //
 
+import Foundation
 import Combine
 
 class ChatGPTViewModel: ObservableObject {
-    @Published var chatResponse = ChatAnswer(text: "")
+    @Published var chatResponse = ChatAnswer(id: UUID(), text: "")
     private let service: ChatCompletionService
     
     init(service: ChatCompletionService = ChatCompletionService()) {
@@ -18,7 +19,7 @@ class ChatGPTViewModel: ObservableObject {
     @MainActor
     func getCompletion(from prompt: String) async throws {
         let response = try await service.getChatCompletion(prompt: prompt)
-        var answer = ChatAnswer(text: response.choices[0].message.content)
+        let answer = ChatAnswer(id: UUID(), text: response.choices[0].message.content)
         chatResponse = answer
     }
 }

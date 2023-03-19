@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct ChatAnswer {
+struct ChatAnswer: ChatMessageProtocol, Hashable {
+    var id: UUID
+    
     let text: String
     var isFavorite: Bool = false
 }
