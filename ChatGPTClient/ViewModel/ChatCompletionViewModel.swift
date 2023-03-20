@@ -10,6 +10,7 @@ import Combine
 
 class ChatGPTViewModel: ObservableObject {
     @Published var chatResponse = ChatAnswer(id: UUID(), text: "")
+    @Published var isFetching = false
     private let service: ChatCompletionService
     
     init(service: ChatCompletionService = ChatCompletionService()) {
@@ -18,6 +19,8 @@ class ChatGPTViewModel: ObservableObject {
     
     @MainActor
     func getCompletion(from prompt: String) async throws {
+        isFetching = true
+        defer { isFetching = false }
         let response = try await service.getChatCompletion(prompt: prompt)
         let answer = ChatAnswer(id: UUID(), text: response.choices[0].message.content)
         chatResponse = answer

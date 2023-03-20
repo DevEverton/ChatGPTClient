@@ -23,7 +23,7 @@ struct UserMessageView: View {
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         ))
-        .cornerRadius(18, corners: [.topRight, .bottomLeft, .bottomRight])
+        .cornerRadius(18, corners: [.topLeft, .topRight, .bottomLeft])
     }
 }
 

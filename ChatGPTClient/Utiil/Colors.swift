@@ -11,6 +11,8 @@ extension Color {
     
     struct MainChat {
         static let background = Color("background")
+        static let progressView = Color("progressView")
+        static let mainGreen = Color("greenChat")
     }
     
     struct Prompt {
