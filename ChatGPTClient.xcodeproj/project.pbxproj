@@ -28,6 +28,7 @@
 		50E2F0A629C685F700B30910 /* ChatMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0A529C685F700B30910 /* ChatMessageType.swift */; };
 		50E2F0A829C9D57200B30910 /* DynamicIslandProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0A729C9D57200B30910 /* DynamicIslandProgressView.swift */; };
 		50E2F0B029C9FA6800B30910 /* ChatGPTClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0AF29C9FA6800B30910 /* ChatGPTClientTests.swift */; };
+		50E2F0B729CA50E100B30910 /* ChatResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0B629CA50E100B30910 /* ChatResponseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		50E2F0A729C9D57200B30910 /* DynamicIslandProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandProgressView.swift; sourceTree = "<group>"; };
 		50E2F0AD29C9FA6800B30910 /* ChatGPTClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E2F0AF29C9FA6800B30910 /* ChatGPTClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTClientTests.swift; sourceTree = "<group>"; };
+		50E2F0B629CA50E100B30910 /* ChatResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				50E2F09529C4F86500B30910 /* MainChatView.swift */,
 				50E2F09729C4F89200B30910 /* ChatPromptView.swift */,
+				50E2F0B629CA50E100B30910 /* ChatResponseView.swift */,
 				50E2F09F29C67DCD00B30910 /* UserMessageView.swift */,
 				50E2F0A729C9D57200B30910 /* DynamicIslandProgressView.swift */,
 			);
@@ -307,6 +310,7 @@
 				50E2F0A829C9D57200B30910 /* DynamicIslandProgressView.swift in Sources */,
 				50E2F08C29C3AAA000B30910 /* ChatCompletionViewModel.swift in Sources */,
 				50E2F07329C3A44100B30910 /* ChatGPTClientApp.swift in Sources */,
+				50E2F0B729CA50E100B30910 /* ChatResponseView.swift in Sources */,
 				50E2F09829C4F89200B30910 /* ChatPromptView.swift in Sources */,
 				50E2F09329C4F3E000B30910 /* ChatPromptSuggestion.swift in Sources */,
 				50E2F0A229C683CB00B30910 /* View+Extensions.swift in Sources */,
