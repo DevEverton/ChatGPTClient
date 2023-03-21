@@ -13,7 +13,7 @@ struct UserMessageView: View {
     var body: some View {
         VStack {
             Text(text)
-                .font(.headline)
+                .font(.system(size: 16, weight: .medium, design: .rounded))
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(.white)
                 .padding()
