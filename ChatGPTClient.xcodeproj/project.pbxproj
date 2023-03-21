@@ -27,7 +27,18 @@
 		50E2F0A429C685BA00B30910 /* ChatMessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0A329C685BA00B30910 /* ChatMessageProtocol.swift */; };
 		50E2F0A629C685F700B30910 /* ChatMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0A529C685F700B30910 /* ChatMessageType.swift */; };
 		50E2F0A829C9D57200B30910 /* DynamicIslandProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0A729C9D57200B30910 /* DynamicIslandProgressView.swift */; };
+		50E2F0B029C9FA6800B30910 /* ChatGPTClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0AF29C9FA6800B30910 /* ChatGPTClientTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50E2F0B129C9FA6800B30910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50E2F06729C3A44100B30910 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50E2F06E29C3A44100B30910;
+			remoteInfo = ChatGPTClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		50E2F06F29C3A44100B30910 /* ChatGPTClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,10 +63,19 @@
 		50E2F0A329C685BA00B30910 /* ChatMessageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageProtocol.swift; sourceTree = "<group>"; };
 		50E2F0A529C685F700B30910 /* ChatMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageType.swift; sourceTree = "<group>"; };
 		50E2F0A729C9D57200B30910 /* DynamicIslandProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandProgressView.swift; sourceTree = "<group>"; };
+		50E2F0AD29C9FA6800B30910 /* ChatGPTClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E2F0AF29C9FA6800B30910 /* ChatGPTClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		50E2F06C29C3A44100B30910 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50E2F0AA29C9FA6800B30910 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				50E2F07129C3A44100B30910 /* ChatGPTClient */,
+				50E2F0AE29C9FA6800B30910 /* ChatGPTClientTests */,
 				50E2F07029C3A44100B30910 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				50E2F06F29C3A44100B30910 /* ChatGPTClient.app */,
+				50E2F0AD29C9FA6800B30910 /* ChatGPTClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +187,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		50E2F0AE29C9FA6800B30910 /* ChatGPTClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				50E2F0AF29C9FA6800B30910 /* ChatGPTClientTests.swift */,
+			);
+			path = ChatGPTClientTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +215,24 @@
 			productReference = 50E2F06F29C3A44100B30910 /* ChatGPTClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		50E2F0AC29C9FA6800B30910 /* ChatGPTClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50E2F0B329C9FA6800B30910 /* Build configuration list for PBXNativeTarget "ChatGPTClientTests" */;
+			buildPhases = (
+				50E2F0A929C9FA6800B30910 /* Sources */,
+				50E2F0AA29C9FA6800B30910 /* Frameworks */,
+				50E2F0AB29C9FA6800B30910 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50E2F0B229C9FA6800B30910 /* PBXTargetDependency */,
+			);
+			name = ChatGPTClientTests;
+			productName = ChatGPTClientTests;
+			productReference = 50E2F0AD29C9FA6800B30910 /* ChatGPTClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +245,10 @@
 				TargetAttributes = {
 					50E2F06E29C3A44100B30910 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					50E2F0AC29C9FA6800B30910 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 50E2F06E29C3A44100B30910;
 					};
 				};
 			};
@@ -214,6 +266,7 @@
 			projectRoot = "";
 			targets = (
 				50E2F06E29C3A44100B30910 /* ChatGPTClient */,
+				50E2F0AC29C9FA6800B30910 /* ChatGPTClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +279,13 @@
 				50E2F09E29C6748400B30910 /* Colors.xcassets in Resources */,
 				50E2F07B29C3A44300B30910 /* Preview Assets.xcassets in Resources */,
 				50E2F07729C3A44300B30910 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50E2F0AB29C9FA6800B30910 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +316,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50E2F0A929C9FA6800B30910 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50E2F0B029C9FA6800B30910 /* ChatGPTClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50E2F0B229C9FA6800B30910 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50E2F06E29C3A44100B30910 /* ChatGPTClient */;
+			targetProxy = 50E2F0B129C9FA6800B30910 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		50E2F07C29C3A44300B30910 /* Debug */ = {
@@ -444,6 +520,52 @@
 			};
 			name = Release;
 		};
+		50E2F0B429C9FA6800B30910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TK5Y26D53T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = EvertonCarneiro.ChatGPTClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatGPTClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatGPTClient";
+			};
+			name = Debug;
+		};
+		50E2F0B529C9FA6800B30910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TK5Y26D53T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = EvertonCarneiro.ChatGPTClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatGPTClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatGPTClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +583,15 @@
 			buildConfigurations = (
 				50E2F07F29C3A44300B30910 /* Debug */,
 				50E2F08029C3A44300B30910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50E2F0B329C9FA6800B30910 /* Build configuration list for PBXNativeTarget "ChatGPTClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50E2F0B429C9FA6800B30910 /* Debug */,
+				50E2F0B529C9FA6800B30910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
