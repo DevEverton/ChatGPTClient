@@ -14,11 +14,12 @@ struct ChatPromptView: View {
 
     var body: some View {
         HStack {
-            TextField(placeholder, text: $text)
+            TextField(placeholder, text: $text, axis: .vertical)
                 .padding(12)
                 .font(.system(size: 16, weight: .light, design: .rounded))
                 .foregroundColor(Color.Prompt.text)
                 .background(.white)
+                .lineLimit(3)
             
             Button(action: action) {
                 Image(systemName: "paperplane.fill")
@@ -28,7 +29,6 @@ struct ChatPromptView: View {
         }
         .background(.white)
         .cornerRadius(8)
-        .frame(height: 30)
         .padding([.bottom, .horizontal], 12)
     }
 }
