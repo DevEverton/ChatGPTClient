@@ -8,6 +8,7 @@
 import XCTest
 @testable import ChatGPTClient
 
+
 class MockChatCompletionService: ChatCompletionServiceProtocol {
     var getChatCompletionCalled = false
     

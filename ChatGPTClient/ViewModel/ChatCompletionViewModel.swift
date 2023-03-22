@@ -20,7 +20,11 @@ class ChatGPTViewModel: ObservableObject {
     @MainActor
     func getCompletion(from prompt: String) async throws {
         isFetching = true
-        defer { isFetching = false }
+        defer {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.isFetching = false
+            }
+        }
         let response = try await service.getChatCompletion(prompt: prompt)
         let answer = ChatAnswer(id: UUID(), text: response.choices[0].message.content)
         chatResponse = answer

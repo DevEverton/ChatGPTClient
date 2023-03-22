@@ -29,6 +29,8 @@
 		50E2F0A829C9D57200B30910 /* DynamicIslandProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0A729C9D57200B30910 /* DynamicIslandProgressView.swift */; };
 		50E2F0B029C9FA6800B30910 /* ChatGPTClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0AF29C9FA6800B30910 /* ChatGPTClientTests.swift */; };
 		50E2F0B729CA50E100B30910 /* ChatResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E2F0B629CA50E100B30910 /* ChatResponseView.swift */; };
+		50E2F0BD29CB751300B30910 /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = 50E2F0BC29CB751300B30910 /* MarkdownView */; };
+		50E2F0C229CB79D600B30910 /* MarkdownView in Frameworks */ = {isa = PBXBuildFile; productRef = 50E2F0C129CB79D600B30910 /* MarkdownView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E2F0BD29CB751300B30910 /* MarkdownView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E2F0C229CB79D600B30910 /* MarkdownView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 				50E2F07129C3A44100B30910 /* ChatGPTClient */,
 				50E2F0AE29C9FA6800B30910 /* ChatGPTClientTests */,
 				50E2F07029C3A44100B30910 /* Products */,
+				50E2F0C029CB79D600B30910 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +203,13 @@
 			path = ChatGPTClientTests;
 			sourceTree = "<group>";
 		};
+		50E2F0C029CB79D600B30910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,6 +226,9 @@
 			dependencies = (
 			);
 			name = ChatGPTClient;
+			packageProductDependencies = (
+				50E2F0BC29CB751300B30910 /* MarkdownView */,
+			);
 			productName = ChatGPTClient;
 			productReference = 50E2F06F29C3A44100B30910 /* ChatGPTClient.app */;
 			productType = "com.apple.product-type.application";
@@ -229,9 +244,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				50E2F0BF29CB770300B30910 /* PBXTargetDependency */,
 				50E2F0B229C9FA6800B30910 /* PBXTargetDependency */,
 			);
 			name = ChatGPTClientTests;
+			packageProductDependencies = (
+				50E2F0C129CB79D600B30910 /* MarkdownView */,
+			);
 			productName = ChatGPTClientTests;
 			productReference = 50E2F0AD29C9FA6800B30910 /* ChatGPTClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -264,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 50E2F06629C3A44100B30910;
+			packageReferences = (
+				50E2F0BB29CB751300B30910 /* XCRemoteSwiftPackageReference "MarkdownView" */,
+			);
 			productRefGroup = 50E2F07029C3A44100B30910 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,6 +358,10 @@
 			target = 50E2F06E29C3A44100B30910 /* ChatGPTClient */;
 			targetProxy = 50E2F0B129C9FA6800B30910 /* PBXContainerItemProxy */;
 		};
+		50E2F0BF29CB770300B30910 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 50E2F0BE29CB770300B30910 /* MarkdownView */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -389,6 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -441,6 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -471,7 +499,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -509,7 +537,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -601,6 +629,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50E2F0BB29CB751300B30910 /* XCRemoteSwiftPackageReference "MarkdownView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LiYanan2004/MarkdownView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50E2F0BC29CB751300B30910 /* MarkdownView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50E2F0BB29CB751300B30910 /* XCRemoteSwiftPackageReference "MarkdownView" */;
+			productName = MarkdownView;
+		};
+		50E2F0BE29CB770300B30910 /* MarkdownView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50E2F0BB29CB751300B30910 /* XCRemoteSwiftPackageReference "MarkdownView" */;
+			productName = MarkdownView;
+		};
+		50E2F0C129CB79D600B30910 /* MarkdownView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50E2F0BB29CB751300B30910 /* XCRemoteSwiftPackageReference "MarkdownView" */;
+			productName = MarkdownView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50E2F06729C3A44100B30910 /* Project object */;
 }

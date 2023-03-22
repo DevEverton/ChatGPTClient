@@ -13,10 +13,11 @@ struct UserMessageView: View {
     var body: some View {
         VStack {
             Text(text)
-                .font(.system(size: 16, weight: .medium, design: .rounded))
+                .font(.system(size: 15, weight: .medium, design: .rounded))
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(.white)
-                .padding()
+                .padding(.horizontal)
+                .padding(.vertical, 10)
         }
         .background(LinearGradient(
             gradient: Gradient(colors: Color.Message.gradientColors),

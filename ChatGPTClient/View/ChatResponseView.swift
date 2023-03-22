@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MarkdownView
 
 struct ChatResponseView: View {
     @State var responseText = ""
@@ -15,14 +16,16 @@ struct ChatResponseView: View {
     
     var body: some View {
         HStack {
-            Text(responseText)
-                .font(.system(size: 16, weight: .light, design: .rounded))
+            MarkdownView(text: $responseText)
+                .font(.system(size: 16, weight: .thin, design: .rounded), for: .body)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
         }
         .padding(.bottom, 8)
         .onAppear {
-            performTypeAnimation(on: message)
+            DispatchQueue.main.async {
+                performTypeAnimation(on: message)
+            }
         }
     }
     
@@ -38,7 +41,9 @@ struct ChatResponseView: View {
                     charCount = responseText.count
                 }
                 if message.count == responseText.count {
-                    scrollUpCallback()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+                        scrollUpCallback()
+                    }
                 }
             }
         }
@@ -49,5 +54,32 @@ struct ChatResponseView: View {
 struct ChatResponseView_Previews: PreviewProvider {
     static var previews: some View {
         ChatResponseView(message: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...", scrollUpCallback: {})
+    }
+}
+
+extension String {
+
+    var length: Int {
+        return count
+    }
+
+    subscript (i: Int) -> String {
+        return self[i ..< i + 1]
+    }
+
+    func substring(fromIndex: Int) -> String {
+        return self[min(fromIndex, length) ..< length]
+    }
+
+    func substring(toIndex: Int) -> String {
+        return self[0 ..< max(0, toIndex)]
+    }
+
+    subscript (r: Range<Int>) -> String {
+        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
+                                            upper: min(length, max(0, r.upperBound))))
+        let start = index(startIndex, offsetBy: range.lowerBound)
+        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
+        return String(self[start ..< end])
     }
 }
