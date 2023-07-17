@@ -8,7 +8,7 @@
 import Foundation
 
 class ChatCompletionService: ChatCompletionServiceProtocol {
-    let apiKey = "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"
+    let apiKey = "ENTER YOUR API KEY HERE"
     
     func getChatCompletion(prompt: String) async throws -> ChatCompletionResponse {
         guard let url = URL(string: "https://api.openai.com/v1/chat/completions") else {
