@@ -82,6 +82,6 @@ struct MainChatView: View {
 struct MainChatView_Previews: PreviewProvider {
     static var previews: some View {
         MainChatView()
-            .environmentObject(ChatGPTViewModel())
+            .environmentObject(ChatGPTViewModel(service: ChatCompletionService()))
     }
 }

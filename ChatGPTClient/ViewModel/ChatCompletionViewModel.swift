@@ -11,9 +11,9 @@ import Combine
 class ChatGPTViewModel: ObservableObject {
     @Published var chatResponse = ChatAnswer(id: UUID(), text: "")
     @Published var isFetching = false
-    private let service: ChatCompletionService
+    private let service: ChatCompletionServiceProtocol
     
-    init(service: ChatCompletionService = ChatCompletionService()) {
+    init(service: ChatCompletionServiceProtocol) {
         self.service = service
     }
     

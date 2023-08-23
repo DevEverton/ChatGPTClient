@@ -8,10 +8,11 @@
 import Foundation
 
 class ChatCompletionService: ChatCompletionServiceProtocol {
+    var url = "https://api.openai.com/v1/chat/completions"
     let apiKey = "ENTER YOUR API KEY HERE"
     
     func getChatCompletion(prompt: String) async throws -> ChatCompletionResponse {
-        guard let url = URL(string: "https://api.openai.com/v1/chat/completions") else {
+        guard let url = URL(string: url) else {
             throw ChatCompletionError.request
         }
         

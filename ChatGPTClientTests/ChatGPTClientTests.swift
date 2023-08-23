@@ -10,6 +10,7 @@ import XCTest
 
 
 class MockChatCompletionService: ChatCompletionServiceProtocol {
+    var url: String = "mockApiKey"
     var getChatCompletionCalled = false
     
     func getChatCompletion(prompt: String) async throws -> ChatCompletionResponse {

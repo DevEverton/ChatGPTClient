@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ChatCompletionServiceProtocol {
+    var url: String { get set }
     func getChatCompletion(prompt: String) async throws -> ChatCompletionResponse 
 }

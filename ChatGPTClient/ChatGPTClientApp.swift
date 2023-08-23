@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ChatGPTClientApp: App {
-    @StateObject private var chatViewModel = ChatGPTViewModel()
+    @StateObject private var chatViewModel = ChatGPTViewModel(service: ChatCompletionService())
 
     var body: some Scene {
         WindowGroup {
